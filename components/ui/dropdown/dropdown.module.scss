@@ -1,0 +1,32 @@
+.container {
+  position: fixed;
+  width: 1025px;
+  left: calc(50% - 1025px / 2);
+  top: 67px;
+  padding-top: 33px;
+  z-index: 1000;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 200px;
+  position: absolute;
+  animation: enter 0.3s ease forwards;
+  width: 100%;
+  border-radius: 5px;
+  background: $themeWhite;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    top: 35px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}

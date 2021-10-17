@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem;
+
+  & a {
+    text-decoration: none;
+    color: $textBlack;
+  }
+}
+
+.image {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  letter-spacing: 0.2em;
+}
+
+.price {
+  font-size: 0.65em;
+  margin-top: 5px;
+}
+
+.bookmark {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 764px) {
+  .container {
+    width: 50%;
+    flex: none;
+  }
+}
