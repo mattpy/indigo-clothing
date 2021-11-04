@@ -21,7 +21,7 @@ function FooterItem(props) {
           <Link href='/collections'>Collections</Link>
         </li>
         <li>
-          <Link href='/collections/denims'>Denims</Link>
+          <Link href='/collections/denim'>Denim</Link>
         </li>
         <li>
           <Link href='/collections/sweatshirts'>Sweatshirts</Link>
