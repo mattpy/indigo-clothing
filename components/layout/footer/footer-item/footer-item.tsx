@@ -18,16 +18,16 @@ function FooterItem(props) {
       <ul>
         <li className={classes.title}>Shop</li>
         <li>
-          <Link href='/collections/new-arrivals'>New Arrivals</Link>
+          <Link href='/collections'>Collections</Link>
         </li>
         <li>
-          <Link href='/collections/new-arrivals'>Featured</Link>
+          <Link href='/collections/denims'>Denims</Link>
         </li>
         <li>
-          <Link href='/collections/new-arrivals'>Womens</Link>
+          <Link href='/collections/sweatshirts'>Sweatshirts</Link>
         </li>
         <li>
-          <Link href='/collections/new-arrivals'>Mens</Link>
+          <Link href='/collections/caps'>Caps</Link>
         </li>
       </ul>
     </div>
