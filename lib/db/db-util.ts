@@ -1,14 +1,8 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, Collection } from 'mongodb';
 
-// import '../db/models/Product';
+let cached: { conn: null | MongoClient } = { conn: null };
 
-let cached = global.mongoose;
-
-if (!cached) {
-  cached = global.mongoose = { conn: null };
-}
-
-async function connectDB() {
+async function connectDB(): Promise<MongoClient> {
   if (cached.conn) {
     return cached.conn;
   }
@@ -17,15 +11,34 @@ async function connectDB() {
   return cached.conn;
 }
 
-function serializeFields(items) {
-  for (const item of items) {
-    if (item._id) {
-      item._id = item._id.toString();
+async function getCollection(collection): Promise<Collection> {
+  const client: MongoClient = await connectDB();
+  return client.db().collection(collection);
+}
+
+function serializeFields(data): void {
+  if (data.length) {
+    for (const item of data) {
+      serialize(item);
     }
-    if (item.price) {
-      item.price = item.price.toString();
-    }
+  } else {
+    serialize(data);
   }
 }
 
-export { connectDB, serializeFields };
+function serialize(item): void {
+  if (item._id) {
+    item._id = item._id.toString();
+  }
+  if (item.user) {
+    item.user = item.user.toString();
+  }
+  if (item.product) {
+    item.product = item.product.toString();
+  }
+  if (item.price) {
+    item.price = parseFloat(item.price);
+  }
+}
+
+export { connectDB, getCollection, serializeFields };

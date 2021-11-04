@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import { Carousel } from 'react-responsive-carousel';
 
 import classes from './hero.module.scss';
@@ -18,7 +18,7 @@ interface Props {
 function Hero(props: Props): JSX.Element {
   return (
     <div id={classes.container}>
-      <Fade>
+      <Fade duration={1500}>
         <Carousel
           autoPlay={true}
           interval={4000}

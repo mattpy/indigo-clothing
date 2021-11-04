@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+
+  & > *:not(:last-child) {
+    border-right: 1px solid $lightGrey;
+  }
+}

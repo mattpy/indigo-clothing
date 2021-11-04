@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import NextImage from 'next/image';
+import Rating from '../../../product/description/rating/rating';
 
+import OutOfStock from '../../../ui/out-of-stock/out-of-stock';
 import classes from './item.module.scss';
 
 type Product = {
@@ -10,6 +12,8 @@ type Product = {
   price: number;
   quantity: number;
   images: string[];
+  type: string;
+  color: string;
 };
 
 interface Props {
@@ -21,13 +25,19 @@ let interval;
 function Item({ product }: Props) {
   const [image, setImage] = useState(product.images[0]);
 
+  useEffect(() => {
+    return () => clearInterval(interval);
+  }, []);
+
   function changeImage(event) {
+    if (product.images.length < 2) return;
+
     let counter = 0;
 
     if (event.type === 'mouseenter') {
       interval = setInterval(() => {
         counter++;
-        if (counter >= product.images.length) {
+        if (counter >= 2) {
           counter = 0;
         }
         setImage(product.images[counter]);
@@ -41,7 +51,7 @@ function Item({ product }: Props) {
 
   return (
     <div className={classes.container}>
-      <Link href={`/collections/home/${product._id}`}>
+      <Link href={`/collections/products/${product._id}`}>
         <a>
           <div className={classes.wrapper}>
             <div
@@ -49,7 +59,7 @@ function Item({ product }: Props) {
               onMouseEnter={changeImage}
               onMouseLeave={changeImage}
             >
-              <Image
+              <NextImage
                 src={image}
                 alt={product.title}
                 height={720}
@@ -60,6 +70,14 @@ function Item({ product }: Props) {
             <div className={classes.title}>{product.title}</div>
             <div className={classes.price}>${product.price}</div>
             <div className={classes.bookmark}>{'<3'}</div>
+            {product.quantity === 0 && <OutOfStock />}
+          </div>
+          <div className={classes.rating}>
+            <Rating
+              fontSize='0.625rem'
+              size={16}
+              handleShowReviews={() => {}}
+            />
           </div>
         </a>
       </Link>

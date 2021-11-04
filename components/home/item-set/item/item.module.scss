@@ -16,6 +16,7 @@
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +39,11 @@
 
 .bookmark {
   font-size: 0.7rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 764px) {

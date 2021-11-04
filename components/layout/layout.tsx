@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import throttle from 'lodash/throttle';
 
-import Navbar from '../navigation/navbar/navbar';
-import Footer from '../footer/footer/footer';
+import StoreProvider from '../../lib/context/context';
+import Announcements from './announcements/announcements';
+import Navbar from './navigation/navbar/navbar';
+import Footer from './footer/footer/footer';
 
 function Layout(props): JSX.Element {
   function onScrollEvent() {
@@ -22,12 +24,13 @@ function Layout(props): JSX.Element {
   }, []);
 
   return (
-    <>
-      <Navbar />
+    <StoreProvider>
       <div id='dropdown-menu' />
+      <Announcements />
+      <Navbar />
       {props.children}
       <Footer />
-    </>
+    </StoreProvider>
   );
 }
 

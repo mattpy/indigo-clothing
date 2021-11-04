@@ -1,0 +1,19 @@
+.container {
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5px 12px;
+  }
+
+  & img {
+    height: 19px;
+    width: 19px;
+  }
+}
+
+.searchbar {
+  position: relative;
+  cursor: pointer;
+}

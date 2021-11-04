@@ -1,0 +1,30 @@
+.container {
+  align-items: center;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.horizontal {
+  display: flex;
+}
+
+.reviews {
+  font-size: 0.65rem;
+  cursor: default;
+  margin-top: 4px;
+
+  & button {
+    transition: color 0.1s ease-out;
+    outline: none;
+    font-size: 0.65rem;
+    font-size: inherit;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+
+    &:hover {
+      color: $themeLightPurple;
+    }
+  }
+}

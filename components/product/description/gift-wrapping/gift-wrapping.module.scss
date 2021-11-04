@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.68rem;
+  width: 200px;
+
+  & h5 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0;
+    font-size: inherit;
+    margin-bottom: 0.25rem;
+  }
+}

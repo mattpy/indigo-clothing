@@ -1,0 +1,47 @@
+.container {
+  flex: 1;
+  color: $textBlack;
+
+  & hr {
+    border-top: $lightGrey;
+    margin: 1rem auto;
+  }
+}
+
+.title {
+  & h1 {
+    margin: 0;
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+  }
+}
+
+.price {
+  font-size: 0.875rem;
+}
+
+.financing {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.shipping {
+  font-size: 0.75rem;
+}
+
+.shippingLeft {
+  font-weight: 700;
+}
+
+.shippingRight {
+  font-weight: inherit;
+}
+
+.timeframe {
+  color: $themeLightPurple;
+}

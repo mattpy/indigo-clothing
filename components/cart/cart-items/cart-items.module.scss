@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 0 2rem;
+
+  & h2 {
+    margin: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+
+.title {
+  position: relative;
+  margin-bottom: 1rem;
+
+  & button {
+    position: absolute;
+    bottom: 3px;
+    right: 20px;
+    outline: none;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: $themeLightPurple;
+    color: $absoluteBlack;
+    transition: opacity 0.2s ease-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.noItems {
+  padding: 2rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.price {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: $absoluteBlack;
+  font-weight: 700;
+  padding: 2rem 0;
+  margin: auto 0 4rem;
+}
+
+.checkout {
+  background-color: $absoluteBlack;
+  width: 80%;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+
+  & button {
+    color: $themeLightPurple;
+    text-transform: uppercase;
+    background: transparent;
+    height: 40px;
+    width: 100%;
+    font-family: inherit;
+    outline: none;
+    cursor: no-drop;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+  }
+}

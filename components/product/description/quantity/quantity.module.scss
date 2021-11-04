@@ -1,0 +1,52 @@
+.container {
+  width: fit-content;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0.5rem;
+
+  & form {
+    border: 1px solid $lightGrey;
+  }
+
+  & input,
+  button {
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+
+  & input {
+    width: 50px;
+    text-align: center;
+    font-family: inherit;
+  }
+
+  & button {
+    cursor: pointer;
+    padding: 6px 10px;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s ease-out;
+  }
+
+  & button:hover,
+  button:active {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  & img {
+    height: 100%;
+  }
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.container input::-webkit-outer-spin-button,
+.container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

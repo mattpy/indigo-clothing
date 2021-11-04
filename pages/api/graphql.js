@@ -9,7 +9,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: async () => ({
-    db: await connectDB()
+    client: await connectDB()
   }),
   playground: true,
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground()]

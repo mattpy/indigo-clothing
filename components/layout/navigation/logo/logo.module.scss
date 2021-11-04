@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  width: fit-content;
+  color: $textBlack;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  margin: 0 1rem 0 auto;
+  user-select: none;
+}
+
+.scrolling {
+  // background-color: blue;
+  // -webkit-text-fill-color: transparent;
+  // background-clip: text;
+}
+
+.leftText {
+  font-family: 'Birthstone', sans-serif;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.rightText {
+  position: relative;
+  top: 60px;
+  right: 25px;
+  height: fit-content;
+  font-weight: 700;
+  font-size: 1rem;
+}

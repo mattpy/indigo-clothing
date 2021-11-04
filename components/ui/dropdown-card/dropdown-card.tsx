@@ -15,8 +15,8 @@ function DropdownCard(props: Props): JSX.Element {
     <div className={classes.container}>
       <Link
         href={{
-          pathname: `/collections/[productId]`,
-          query: { productId: title }
+          pathname: `/collections/[productType]`,
+          query: { productType: title }
         }}
       >
         <a>

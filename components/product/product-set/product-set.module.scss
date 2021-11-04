@@ -1,0 +1,17 @@
+.container {
+  font-family: inherit;
+  margin-top: 8rem;
+
+  & h3 {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

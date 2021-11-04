@@ -1,0 +1,56 @@
+.container {
+  border: 1px solid $lightGrey;
+  margin-top: 2rem;
+  font-family: inherit;
+  color: $textBlack;
+}
+
+.tab {
+  display: flex;
+  padding: 0.9rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  cursor: pointer;
+  transition: color 0.1s ease-out;
+
+  & img {
+    transition: transform 0.3s linear;
+  }
+
+  &:hover {
+    color: $themeLightPurple;
+  }
+}
+
+.flip {
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+}
+
+.reviews {
+  transition: height 300ms linear;
+  height: 0px;
+  overflow: hidden;
+}
+
+.noReviews {
+  text-align: center;
+  font-size: 0.8rem;
+}
