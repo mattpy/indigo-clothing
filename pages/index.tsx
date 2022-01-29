@@ -36,7 +36,7 @@ export async function getStaticProps() {
       itemSet1: products.slice(0, 3),
       itemSet2: products.slice(3)
     },
-    revalidate: 86400
+    revalidate: false
   };
 }
 
